@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
 import HomePage from './ui/HomePage';
+import Menu, { loader as menuLoader } from './features/menu/Menu';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/menu',
-        element: <HomePage />,
+        element: <Menu />,
+        loader: menuLoader,
+        errorElement: <Error />,
       },
     ],
   },

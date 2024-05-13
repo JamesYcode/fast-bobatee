@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Earl Grey Bubble Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/milktea.jpg",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 2,
+      "name": "Rose Bubble Milk Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/rosebubble.jpg",
+      "ingredients": [],
+      "soldOut": true
+    },
+    {
+      "id": 3,
+      "name": "DaHongPao Bubble Milk Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/dahongpao.jpg?t=2024-05-13T01%3A27%3A13.052Z",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 4,
+      "name": "Green Bubble Milk Tea",
+      "unitPrice": 11,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/greenmilk.jpg",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 5,
+      "name": "Red Bean Milk Tea",
+      "unitPrice": 16,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/redbean.jpg",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 6,
+      "name": "Oreo Milk Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/oreo.jpg?t=2024-05-13T01%3A34%3A57.322Z",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 7,
+      "name": "Cheese Foam Milk Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/cheese.jpg?t=2024-05-13T01%3A35%3A18.239Z",
+      "ingredients": [],
+      "soldOut": false
+    },
+    {
+      "id": 8,
+      "name": "Four Season Bubble Milk Tea",
+      "unitPrice": 12,
+      "imageUrl": "https://dpmqztxouvdkvilqjqzp.supabase.co/storage/v1/object/public/boba-images/season.jpg?t=2024-05-13T01%3A35%3A40.611Z",
+      "ingredients": [],
+      "soldOut": true
+    }
+  ]
+}
