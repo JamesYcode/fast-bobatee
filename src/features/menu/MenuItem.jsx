@@ -1,16 +1,19 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { formatCurrency } from '../../utilities/helpers';
-import { addItem } from '../cart/cartSlice';
+import { addItem, getCurrentQtyById } from '../cart/cartSlice';
 import Button from '../../ui/Buttton';
+import UpdateItemQty from '../cart/UpdateItemQty';
 
 function MenuItem({ boba }) {
-  const { id, name, unitPrice, ingredients, soldOut, imageUrl } = boba;
+  const { id, name, unitPrice, soldOut, imageUrl } = boba;
 
   const dispatch = useDispatch();
+  const currentQty = useSelector(getCurrentQtyById(id));
+  const isInCart = currentQty > 0;
 
   function handleAddToCart() {
     const newitem = {
-      bobbaId: id,
+      bobaId: id,
       name,
       quantity: 1,
       unitPrice,
@@ -27,9 +30,7 @@ function MenuItem({ boba }) {
       />
       <div className='flex grow flex-col pt-0.5'>
         <p className='font-medium'>{name}</p>
-        <p className='text-sm capitalize italic text-stone-500'>
-          {ingredients.join(', ')}
-        </p>
+
         <div className='mt-auto flex items-center justify-between'>
           {!soldOut ? (
             <p className='text-sm'>{formatCurrency(unitPrice)}</p>
@@ -39,7 +40,14 @@ function MenuItem({ boba }) {
             </p>
           )}
 
-          {!soldOut && (
+          {isInCart && (
+            <div className='flex items-center gap-3 sm:gap-8'>
+              <UpdateItemQty qty={currentQty} bobaId={id} />
+              {/* <DeleteItem bobaId={id} /> */}
+            </div>
+          )}
+
+          {!soldOut && !isInCart && (
             <Button onClick={handleAddToCart} type='small'>
               Add to cart
             </Button>
