@@ -3,6 +3,7 @@ import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
 import HomePage from './ui/HomePage';
 import Menu, { loader as menuLoader } from './features/menu/Menu';
+import Cart from './features/cart/Cart';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />,
       },
       {
         path: '/menu',
