@@ -1,6 +1,7 @@
 import { Outlet, useNavigation } from 'react-router-dom';
 import Header from './Header';
 import Loading from './Loading';
+import CartOverview from '../features/cart/CartOverview';
 
 function AppLayout() {
   // * Three stages in useNavigation. Idle, Submitting, Loading
@@ -16,7 +17,7 @@ function AppLayout() {
           <Outlet />
         </main>
       </div>
-      {/* <CartOverview /> */}
+      <CartOverview />
     </div>
   );
 }
