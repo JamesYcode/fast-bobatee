@@ -3,6 +3,7 @@ import { formatCurrency } from '../../utilities/helpers';
 import { addItem, getCurrentQtyById } from '../cart/cartSlice';
 import Button from '../../ui/Buttton';
 import UpdateItemQty from '../cart/UpdateItemQty';
+import DeleteItem from '../cart/DeleteItem';
 
 function MenuItem({ boba }) {
   const { id, name, unitPrice, soldOut, imageUrl } = boba;
@@ -43,7 +44,7 @@ function MenuItem({ boba }) {
           {isInCart && (
             <div className='flex items-center gap-3 sm:gap-8'>
               <UpdateItemQty qty={currentQty} bobaId={id} />
-              {/* <DeleteItem bobaId={id} /> */}
+              <DeleteItem bobaId={id} />
             </div>
           )}
 
