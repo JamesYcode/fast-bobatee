@@ -65,5 +65,62 @@
       "soldOut": true
     }
   ],
-  "order": []
+  "order": [
+    {
+      "customer": "James",
+      "phone": "123-321-4567",
+      "address": "890 st 24th ave",
+      "priority": true,
+      "cart": [
+        {
+          "bobaId": 3,
+          "name": "DaHongPao Bubble Milk Tea",
+          "quantity": 1,
+          "unitPrice": 12,
+          "totalPrice": 12
+        },
+        {
+          "bobaId": 1,
+          "name": "Earl Grey Bubble Tea",
+          "quantity": 2,
+          "unitPrice": 12,
+          "totalPrice": 24
+        }
+      ],
+      "position": "",
+      "totalCartPrice": "36",
+      "id": "l6yghe",
+      "estimatedDelivery": 1716084024204,
+      "priorityPrice": 7.2,
+      "orderPrice": 43.2
+    },
+    {
+      "customer": "Giselle",
+      "phone": "123-123-4567",
+      "address": "899 st 12th ave",
+      "cart": [
+        {
+          "bobaId": 1,
+          "name": "Earl Grey Bubble Tea",
+          "quantity": 1,
+          "unitPrice": 12,
+          "totalPrice": 12
+        },
+        {
+          "bobaId": 6,
+          "name": "Oreo Milk Tea",
+          "quantity": 1,
+          "unitPrice": 12,
+          "totalPrice": 12
+        }
+      ],
+      "position": "",
+      "totalCartPrice": "24",
+      "priority": false,
+      "id": "w8yrwx",
+      "estimatedDelivery": 1716084069792,
+      "priorityPrice": 0,
+      "orderPrice": 24
+    }
+  ]
 }
