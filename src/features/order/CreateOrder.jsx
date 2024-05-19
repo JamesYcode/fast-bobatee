@@ -99,7 +99,7 @@ function CreateOrder() {
             onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label className='font-medium' htmlFor='priority'>
-            Want to yo give your order priority?
+            ⚡ Priority
           </label>
         </div>
 
@@ -132,7 +132,7 @@ export async function action({ request }) {
   const formData = await request.formData();
   // console.log(formData);
   const data = Object.fromEntries(formData);
-  console.log(data);
+  // console.log(data);
   const orderNumber = generateUID();
 
   // ? Change variable to be from 2-10 minutes, randomly generated.
@@ -150,7 +150,7 @@ export async function action({ request }) {
   // Calculate totalPrice
   const totalPrice = totalCartPrice + priorityPrice;
 
-  console.log(totalCartPrice, priorityPrice, totalPrice);
+  // console.log(totalCartPrice, priorityPrice, totalPrice);
 
   const order = {
     ...data,
@@ -165,7 +165,7 @@ export async function action({ request }) {
     orderPrice: totalPrice,
     // status: 'Preparing',
   };
-  console.log(order);
+  // console.log(order);
 
   // * Error handling
   const errors = {};
@@ -174,7 +174,7 @@ export async function action({ request }) {
   if (Object.keys(errors).length > 0) return errors;
   // * If everything is ok, create new order and redirect
   const newOrder = await createOrder(order);
-  console.log(newOrder);
+
   // ! Do not overuse! It deactivates couple of performance optimization of redux
   // ? Hacky way
   store.dispatch(clearCart());

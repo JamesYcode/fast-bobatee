@@ -18,8 +18,8 @@ function CreateUser() {
   }
   return (
     <form onSubmit={handleSubmit} className='text-center'>
-      <p className='mb-4 text-sm text-stone-600 md:text-base'>
-        👋 Welcome! Please start by telling us your name:
+      <p className='mb-4 text-sm sm:text-base text-stone-100 md:text-lg'>
+        👋 Welcome! Please start by telling us your name
       </p>
 
       <input
