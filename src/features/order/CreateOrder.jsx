@@ -135,11 +135,23 @@ export async function action({ request }) {
   // console.log(data);
   const orderNumber = generateUID();
 
-  // ? Change variable to be from 2-10 minutes, randomly generated.
-  const processingTimeInMin = 1;
+  const standardProcessingTimeMin = Math.floor(Math.random() * 9) + 2; // 2-10 minutes
+  const standardDeliveryTimeMin = Math.floor(Math.random() * 11) + 5; // 5-15 minutes
 
-  // ? Change variable to be from 5-15 minutes, randomly generated.
-  const delieryTimeInMin = 1;
+  const priorityProcessingTimeMin = Math.floor(Math.random() * 3) + 1; // 1-3 minutes
+  const priorityDeliveryTimeMin = Math.floor(Math.random() * 6) + 3; // 3-8 minutes
+
+  // Check if the order is a priority order
+  const isPriority = data.priority === 'true';
+
+  // Calculate processing and delivery times based on priority
+  const processingTimeInMin = isPriority
+    ? priorityProcessingTimeMin
+    : standardProcessingTimeMin;
+
+  const delieryTimeInMin = isPriority
+    ? priorityDeliveryTimeMin
+    : standardDeliveryTimeMin;
 
   // Extract total cart price
   const totalCartPrice = parseInt(data.totalCartPrice);

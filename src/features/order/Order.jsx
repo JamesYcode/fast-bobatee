@@ -45,14 +45,14 @@ function Order() {
             </span>
           )}
           <span className='rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50'>
-            {deliveryIn >= 0 ? `Preparing` : `Delivered`} order
+            {deliveryIn > 0 ? `Preparing` : `Delivered`} order
           </span>
         </div>
       </div>
 
       <div className='flex flex-wrap items-center justify-between gap-4 bg-stone-200 px-6 py-5'>
         <p className='font-medium'>
-          {deliveryIn >= 0
+          {deliveryIn > 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
             : 'Order should have arrived'}
         </p>
