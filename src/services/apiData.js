@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:8000';
+// ! For development purpose.
+// const API_URL = 'http://localhost:8000';
+// ! For Deployment purpose.
+const API_URL = 'https://fastboba-api.onrender.com';
 
 export async function getMenu() {
   const res = await fetch(`${API_URL}/data`);
