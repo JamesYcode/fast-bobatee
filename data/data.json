@@ -65,34 +65,5 @@
       "soldOut": true
     }
   ],
-  "order": [
-    {
-      "customer": "James",
-      "phone": "1234567891",
-      "address": "123 2nd ave",
-      "priority": true,
-      "cart": [
-        {
-          "bobaId": 1,
-          "name": "Earl Grey Bubble Tea",
-          "quantity": 1,
-          "unitPrice": 12,
-          "totalPrice": 12
-        },
-        {
-          "bobaId": 3,
-          "name": "DaHongPao Bubble Milk Tea",
-          "quantity": 1,
-          "unitPrice": 12,
-          "totalPrice": 12
-        }
-      ],
-      "position": "",
-      "totalCartPrice": "24",
-      "id": "dydyrq",
-      "estimatedDelivery": 1716156424104,
-      "priorityPrice": 4.800000000000001,
-      "orderPrice": 28.8
-    }
-  ]
+  "order": []
 }
