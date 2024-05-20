@@ -11,6 +11,7 @@ function HomePage() {
         autoPlay
         muted
         loop
+        playsInline
         className='w-full h-screen object-cover'
         src={video}
       ></video>
